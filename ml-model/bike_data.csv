@@ -1,0 +1,11 @@
+brand,year,km_driven,owner,fuel,price
+Honda,2022,12000,1,Petrol,120000
+Yamaha,2021,15000,1,Petrol,110000
+Royal Enfield,2020,20000,2,Petrol,140000
+Bajaj,2019,30000,2,Petrol,70000
+TVS,2018,40000,3,Petrol,50000
+KTM,2023,5000,1,Petrol,220000
+Suzuki,2020,25000,2,Petrol,85000
+Hero,2017,45000,3,Petrol,40000
+Ather,2023,3000,1,Electric,150000
+Ola,2024,1000,1,Electric,160000

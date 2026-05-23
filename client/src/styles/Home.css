@@ -1,0 +1,204 @@
+/* FULL PAGE */
+
+.home-container{
+  min-height:100vh;
+  background:
+  linear-gradient(
+    to right,
+    #020617,
+    #0f172a,
+    #1e293b
+  );
+
+  color:white;
+  overflow:hidden;
+}
+
+/* HERO SECTION */
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:80px 10%;
+
+  flex-wrap:wrap;
+}
+
+/* LEFT CONTENT */
+
+.hero-left{
+  flex:1;
+  min-width:300px;
+}
+
+.hero-title{
+  font-size:70px;
+  font-weight:bold;
+  line-height:1.1;
+
+  margin-bottom:20px;
+}
+
+.hero-title span{
+  color:#facc15;
+}
+
+.hero-text{
+  font-size:20px;
+  color:#cbd5e1;
+
+  margin-bottom:35px;
+
+  line-height:1.7;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+}
+
+.primary-btn{
+
+  background:#facc15;
+  color:black;
+
+  padding:15px 35px;
+
+  border:none;
+  border-radius:12px;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.primary-btn:hover{
+  transform:translateY(-5px);
+  background:#fde047;
+}
+
+.secondary-btn{
+
+  background:transparent;
+  border:2px solid #facc15;
+
+  color:#facc15;
+
+  padding:15px 35px;
+
+  border-radius:12px;
+
+  font-size:18px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.secondary-btn:hover{
+  background:#facc15;
+  color:black;
+}
+
+/* RIGHT IMAGE */
+
+.hero-right{
+  flex:1;
+  display:flex;
+  justify-content:center;
+  min-width:300px;
+}
+
+.hero-right img{
+
+  width:100%;
+  max-width:550px;
+
+  border-radius:30px;
+
+  animation:float 4s ease-in-out infinite;
+
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+/* FLOAT ANIMATION */
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-20px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
+
+/* FEATURES */
+
+.features{
+
+  padding:60px 10%;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(250px,1fr));
+
+  gap:30px;
+}
+
+.feature-card{
+
+  background:#0f172a;
+
+  padding:35px;
+
+  border-radius:20px;
+
+  transition:0.3s;
+}
+
+.feature-card:hover{
+
+  transform:translateY(-10px);
+
+  background:#1e293b;
+}
+
+.feature-card h2{
+  color:#facc15;
+  margin-bottom:15px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .hero-title{
+    font-size:50px;
+  }
+
+  .hero-buttons{
+    justify-content:center;
+  }
+
+}

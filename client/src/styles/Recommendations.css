@@ -1,0 +1,120 @@
+.recommend-page{
+
+  min-height:100vh;
+
+  background:#020617;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:40px;
+
+}
+
+.recommend-card{
+
+  width:500px;
+
+  background:#0f172a;
+
+  padding:40px;
+
+  border-radius:25px;
+
+  box-shadow:0 0 20px rgba(0,0,0,0.5);
+
+}
+
+.recommend-card h1{
+
+  color:white;
+
+  text-align:center;
+
+  margin-bottom:30px;
+
+  font-size:40px;
+
+}
+
+.recommend-card span{
+
+  color:#facc15;
+
+}
+
+.recommend-card input,
+.recommend-card select{
+
+  width:100%;
+
+  padding:15px;
+
+  margin-bottom:20px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#1e293b;
+
+  color:white;
+
+  font-size:16px;
+
+}
+
+.recommend-card button{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:12px;
+
+  background:#facc15;
+
+  color:black;
+
+  font-size:18px;
+
+  font-weight:bold;
+
+  cursor:pointer;
+
+}
+
+.recommend-results{
+
+  margin-top:30px;
+
+}
+
+.recommend-results h2{
+
+  color:white;
+
+  margin-bottom:20px;
+
+}
+
+.bike-box{
+
+  background:#1e293b;
+
+  color:white;
+
+  padding:15px;
+
+  border-radius:12px;
+
+  margin-bottom:15px;
+
+  font-size:18px;
+
+}
