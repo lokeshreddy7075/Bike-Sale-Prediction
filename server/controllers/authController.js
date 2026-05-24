@@ -13,40 +13,9 @@ exports.register = async (req, res) => {
       password
     } = req.body;
 
-    if (
-      !name ||
-      !email ||
-      !mobile ||
-      !password
-    ) {
-
-      return res.status(400).json({
-
-        message: "All fields are required"
-
-      });
-
-    }
-
-    const token = jwt.sign(
-
-      {
-        email
-      },
-
-      "supersecretkey",
-
-      {
-        expiresIn: "7d"
-      }
-
-    );
-
     res.status(201).json({
 
       message: "Registration Success",
-
-      token,
 
       user: {
         name,
@@ -78,22 +47,8 @@ exports.login = async (req, res) => {
   try {
 
     const {
-      email,
-      password
+      email
     } = req.body;
-
-    if (
-      !email ||
-      !password
-    ) {
-
-      return res.status(400).json({
-
-        message: "Email and Password required"
-
-      });
-
-    }
 
     const token = jwt.sign(
 
@@ -143,8 +98,6 @@ exports.getUser = async (req, res) => {
   try {
 
     res.status(200).json({
-
-      message: "User Authorized",
 
       user: req.user
 
