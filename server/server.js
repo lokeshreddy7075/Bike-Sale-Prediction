@@ -16,7 +16,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.options("*", cors(corsOptions)); // ✅ Handle preflight requests
+app.options(/(.*)/,  cors(corsOptions)); // ✅ Fixed for Express + Node.js v24
 
 app.use(express.json());
 
