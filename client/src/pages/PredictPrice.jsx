@@ -55,7 +55,7 @@ function PredictPrice() {
 
       const res = await axios.post(
 
-        "http://localhost:5001/predict",
+        "https://bike-backend.onrender.com/api/predict",
 
         formData
 

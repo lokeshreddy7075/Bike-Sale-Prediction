@@ -94,7 +94,7 @@ function EditBike() {
 
       await axios.put(
 
-        `http://localhost:5000/api/bikes/${id}`,
+        `https://bike-backend.onrender.com/api/bikes/${id}`,
 
         bike,
 

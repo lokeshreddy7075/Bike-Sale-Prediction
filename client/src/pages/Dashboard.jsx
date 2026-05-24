@@ -74,7 +74,7 @@ function Dashboard() {
 
       await axios.delete(
 
-        `http://localhost:5000/api/bikes/${id}`,
+      `https://bike-backend.onrender.com/api/bikes/${id}`,
 
         {
 

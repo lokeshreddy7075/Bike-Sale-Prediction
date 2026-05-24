@@ -21,7 +21,7 @@ function Bikes() {
 
         const res = await axios.get(
 
-          "http://localhost:5000/api/bikes"
+          "https://bike-backend.onrender.com/api/bikes"
 
         );
 

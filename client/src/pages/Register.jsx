@@ -87,7 +87,7 @@ function Register() {
 
       const res = await axios.post(
 
-        "http://localhost:5000/api/auth/register",
+        "https://bike-backend.onrender.com/api/auth/register",
 
         {
 

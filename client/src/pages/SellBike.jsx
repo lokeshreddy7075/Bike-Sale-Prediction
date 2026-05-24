@@ -48,7 +48,7 @@ function SellBike() {
 
       const res = await axios.post(
 
-        "http://localhost:5000/api/bikes/add",
+        "https://bike-backend.onrender.com/api/bikes/add",
 
         bike,
 
