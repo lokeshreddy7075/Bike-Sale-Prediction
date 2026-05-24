@@ -9,7 +9,7 @@ dotenv.config();
 /* APP */
 const app = express();
 
-/* CORS FIX */
+/* CORS */
 app.use(
   cors({
     origin: "https://bike-sale-prediction.vercel.app",
@@ -37,10 +37,8 @@ mongoose
     console.log(err);
   });
 
-/* AUTH ROUTES */
+/* ROUTES */
 const authRoutes = require("./routes/authRoutes");
-
-/* BIKE ROUTES */
 const bikeRoutes = require("./routes/bikeRoutes");
 
 /* API ROUTES */
