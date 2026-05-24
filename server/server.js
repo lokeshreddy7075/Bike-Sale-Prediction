@@ -1,35 +1,17 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require("dotenv").config();
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 
-app.use(cors());
+/* FINAL CORS FIX */
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 
 app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("API Running ✅");
-});
-
-mongoose
-  .connect(process.env.MONGO_URL)
-  .then(() => {
-    console.log("MongoDB Connected ✅");
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-
-const authRoutes = require("./routes/authRoutes");
-const bikeRoutes = require("./routes/bikeRoutes");
-
-app.use("/api/auth", authRoutes);
-app.use("/api/bikes", bikeRoutes);
-
-const PORT = process.env.PORT || 10000;
-
-app.listen(PORT, () => {
-  console.log(`Server Running on Port ${PORT}`);
-});
