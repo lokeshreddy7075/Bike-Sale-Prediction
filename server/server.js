@@ -7,12 +7,11 @@ dotenv.config();
 
 const app = express();
 
+/* CORS FIX */
 app.use(
   cors({
-    origin: [
-      "https://bike-sale-prediction.vercel.app",
-      "http://localhost:3000",
-    ],
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
@@ -23,17 +22,25 @@ app.get("/", (req, res) => {
   res.send("API Running ✅");
 });
 
+/* DATABASE */
 mongoose
   .connect(process.env.MONGO_URL)
-  .then(() => console.log("MongoDB Connected ✅"))
-  .catch((err) => console.log(err));
+  .then(() => {
+    console.log("MongoDB Connected ✅");
+  })
+  .catch((err) => {
+    console.log("Mongo Error ❌");
+    console.log(err);
+  });
 
+/* ROUTES */
 const authRoutes = require("./routes/authRoutes");
 const bikeRoutes = require("./routes/bikeRoutes");
 
 app.use("/api/auth", authRoutes);
 app.use("/api/bikes", bikeRoutes);
 
+/* SERVER */
 const PORT = process.env.PORT || 10000;
 
 app.listen(PORT, () => {
