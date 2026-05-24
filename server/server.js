@@ -9,10 +9,13 @@ dotenv.config();
 /* APP */
 const app = express();
 
-/* CORS */
+/* CORS FIX */
 app.use(
   cors({
-    origin: "https://bike-sale-prediction.vercel.app",
+    origin: [
+      "https://bike-sale-prediction.vercel.app",
+      "http://localhost:3000",
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
